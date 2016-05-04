@@ -25,7 +25,7 @@ const {NativeAppEventEmitter} = React;
 | id              | String (read only)             | Unique id for the reminder. |
 | title           | String             | The title for the reminder. |
 | startDate       | Date             | The start date of the reminder. |
-| dueDate         | Date             | The date by which the reminder should be completed. |
+| dueDate         | Date             | The date by which the reminder should be completed. Required if recurrence is set. |
 | completionDate  | Date (read only) | The date on which the reminder was completed. |
 | location        | String           | The location associated with the reminder. |
 | notes           | String           | The notes associated with the reminder. |
@@ -145,6 +145,7 @@ RNCalendarReminders.saveReminder('title', {
   location: 'location',
   notes: 'notes',
   startDate: '2016-10-01T09:45:00.000UTC',
+  dueDate: '2016-10-01T09:45:00.000UTC',
   alarms: [{
     date: -1 // or absolute date
   }],
